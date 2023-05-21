@@ -8,3 +8,4 @@ SOLUZIONE :
 - Se diviso 5 da resto zero, stampiamo buzz 
 - Se diviso 3 da resto zero, stampiamo fizz
 - Se non rispetta nessuna di queste condizioni, stampiamo il numero, che sarre l'indice del ciclo fro; 
+- 
