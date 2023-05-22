@@ -1,30 +1,44 @@
-"use strict";
 
+const contSqr = document.getElementById("containerSqr");
 
-const output = document.getElementById('output');
+for (i=1; i<=100; i++) {
 
-for(let i = 1; i <= 100; i++){
+   
+    let eleSqr = document.createElement("div");
+    
+    eleSqr.classList.add("sqr");
 
+   
+    let cntSqr = document.createElement("div");
+    
+    cntSqr.classList.add("contentSqr")
 
-    if (i % 15 == 0) {
+   
+    contSqr.append(eleSqr);
 
-        output.innerHTML = '<div>Fizz Buzz</div>';
-        console.log('Fizz Buzz');
+    
+    eleSqr.append(cntSqr);
 
-    }else if (i % 5 == 0) {
+    if (i % 3 === 0 && i % 5 === 0) {
 
-        output.innerHTML = '<div>Buzz</div>';
-        console.log('buzz');
+        cntSqr.classList.add("fizzbuzz")
+        cntSqr.append("Fizzbuzz");
 
-    }else if (i % 3 == 0) {
+    } else if (i % 3 === 0) {
 
-        output.innerHTML = '<div>Fizz</div>';
-        console.log('Fizz');
+        cntSqr.classList.add("fizz")
+        cntSqr.append("Fizz");
 
-    }else {
+    } else if (i % 5 === 0) {
 
-        console.log(i);
-        output.innerHTML = '<div>${i}</div>'
+        cntSqr.classList.add("buzz")
+        cntSqr.append("Buzz");
+
+    } else {
+
+        cntSqr.append(i);
+
     }
+
 
 }
